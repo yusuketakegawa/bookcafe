@@ -1,0 +1,56 @@
+.form_show_wrapper {
+  text-align: center;
+  min-height: 100vh;
+ }
+
+ .book-show-form {
+   min-height: 80vh;
+   padding: 50px 50px;
+ }
+
+ .book-show {
+  border: double  5px  aqua;
+  width: 50%;
+  margin: 0 auto;
+  background-color: #EDFFBE;
+ }
+
+ .book_hedding {
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  padding: 20px;
+ }
+
+ .book__user {
+   font-size: 30px;
+ }
+
+ .book__btn {
+   border: 1px solid black;
+ }
+
+.new-book {
+  margin: 50px;
+  font-size: 25px;
+}
+
+.show_form_btn {
+  width: 70px;
+  margin-bottom: 40px;
+  margin-top: 10px;
+}
+
+h4 {
+  font-size: 30px;
+}
+
+.comments_lists {
+  margin-bottom: 40px;
+}
+
+.comment_user {
+  padding-right: 200px;
+  font-size: 20px;
+  font-weight: bold;
+}

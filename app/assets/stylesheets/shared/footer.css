@@ -1,0 +1,14 @@
+/* footer */
+
+.footer {
+  background-color:#A9A9A9;
+  padding: 10px 0;
+  width: 100%;
+ }
+ 
+ .footer-centence{
+  text-align: center;
+  color: white;
+  font-size: 12px;
+ }
+ 

@@ -1,0 +1,50 @@
+<%= render "devise/shared/header" %>
+
+<div class="talks-wrapper">
+  <div class="talk-header">
+    <div class="left-header">
+      <div class="header-title">
+      <%= @room.name %>
+      </div>
+    </div>
+    <div class="right-header">
+      <div class="header-button">
+        <%= link_to '終了する', room_path(@room), method: :delete %>
+      </div>
+    </div>
+  </div>
+
+  <h2>コメント一覧</h2>
+
+  
+  <div class="talks-form">
+    <div class="talks-form-sentence">
+      <% @talks.each do |talks|%> 
+        <div class="takes-mass">
+          <div class="upper-talks">
+            <div class="talks-name">
+              <%= talks.user.nickname%>
+            </div>
+            <div class="talks-create">
+              <%=  talks.created_at.strftime("%Y年%m月%d日 %H時%M分") %>
+            </div>
+          </div>
+          <div class="lower-talks">
+            <%= talks.talking%>
+          </div>
+        </div>
+      <% end%>
+    </div>
+  </div>
+
+
+  <%= form_with model: [@room, @talk], class: 'form', local: true do |f| %>
+    <div class="form-input">
+      <%= f.text_field :talking, class: "talk-message", placeholder: "文字を入力してください" %>
+    </div>
+    <%= f.submit '送信', class: 'form-submit' %>
+  <% end %>
+
+</div>
+
+<%= render "devise/shared/footer"%>
