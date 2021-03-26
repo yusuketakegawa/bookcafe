@@ -40,7 +40,28 @@
         </div>
 
 
-        
+        <div class="books_comments">
+          <% if user_signed_in? %>
+            <%= form_with(model: [@book, @comment], local: true) do |f| %>
+              <div class="field">
+                <%= f.label :text, "コメント" %><br />
+                <%= f.text_field :text %>
+              </div>
+              <div class="actions">
+                <%= f.submit "送信する", class: :show_form_btn %>
+              </div>
+            <% end %> 
+          <% end %>
+          <h4> コメント一覧</h4>
+          <ul class="comments_lists">
+            <% @comments.each do |comment| %>
+              <li class="comments_list">
+                <%= link_to comment.user.nickname, "hoge", class: :comment_user %>
+                 <%=  comment.text %>
+              </li>
+            <% end %>
+          </ul>
+        </div>
     </div>
   </div>
 </div>
