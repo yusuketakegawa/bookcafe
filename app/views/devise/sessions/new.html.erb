@@ -1,0 +1,25 @@
+<div class="form_wrapper">
+  <h2 class="page-heading">ユーザーログイン</h2>
+  
+  
+    <%= form_with model: @user, url: user_session_path, local: true do |f| %>
+
+        <div class="form">
+          <div class="form-field">
+            <label class="form-text">メールアドレス</label>
+          </div>
+            <%= f.email_field :email,class:"description",  autofocus: true, autocomplete: "email" %>
+        </div>
+
+        <div class="form">
+          <div class="form-field">
+            <label class="form-text">パスワード</label>
+          </div>
+            <%= f.password_field :password,class:"description",  autocomplete: "new-password" %>
+        </div>
+
+    <div class="actions">
+      <%= f.submit "ログイン", class: :form_btn  %>
+    </div>
+  <% end %>
+</div>

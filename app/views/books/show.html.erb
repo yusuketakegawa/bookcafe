@@ -1,0 +1,48 @@
+<%= render "devise/shared/header" %>
+
+<div class="form_show_wrapper">
+  <div class="book-show-form">
+    <div class="book-show">
+        <h1 class="book_hedding">
+          <%= @book.title %>
+        </h1>
+        <%= link_to @book.user.nickname, "hoge", class: :book__user %>
+        <% if user_signed_in? && current_user.id == @book.user_id %>
+          <div class="prototype__manage">
+            <%= link_to "編集する", edit_book_path(@book.id), class: :book__btn %>
+            <%= link_to "削除する", book_path(@book.id), method: :delete, class: :book__btn %>
+          </div>
+        <% end %>
+        
+        <div class="image-text">
+          <%= image_tag @book.image,  class: :book__image %>
+        </div>
+
+        <div class="new-book">
+          <div class="book-name">
+            著者
+          </div>
+          <%= @book.author %>
+        </div>
+
+        <div class="new-book">
+          <div class="book-name">
+            カテゴリー
+          </div>
+          <%= @book.genre.name %>
+        </div>
+
+        <div class="new-book">
+          <div class="book-name">
+            商品の説明
+          </div>
+          <%= @book.description %>
+        </div>
+
+
+        
+    </div>
+  </div>
+</div>
+
+<%= render "devise/shared/footer"%>

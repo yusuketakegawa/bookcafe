@@ -1,0 +1,51 @@
+<div class="form_wrapper">
+  <h2 class="page-heading">ユーザー新規登録</h2>
+
+    <%= form_with model: @user, url: user_registration_path, local: true do |f| %>
+    
+    <div class="form">
+      <div class="form-field">
+        <label class="form-text">ニックネーム</label>
+        <span class="caution">必須</span>
+      </div>
+        <%= f.text_area :nickname, class:"description", placeholder:"例)book太郎" %>
+    <div>
+
+    <div class="form">
+      <div class="form-field">
+        <label class="form-text">メールアドレス</label>
+        <span class="caution">必須</span>
+        </div>
+        <%= f.email_field :email,class:"description",  autofocus: true, autocomplete: "email" %>
+    </div>
+
+    <div class="form">
+      <div class="form-field">
+        <label class="form-text">パスワード</label>
+        <span class="caution">必須</span>
+      </div>
+        <%= f.password_field :password,class:"description", placeholder:"6文字以上の半角英数字でお願いします", autocomplete: "new-password" %>
+    </div>
+
+    <div class="form">
+      <div class="form-field">
+        <label class="form-text">パスワード確認用</label>
+        <span class="caution">必須</span>
+      </div>
+        <%= f.password_field :password_confirmation,class:"description", placeholder:"同じパスワードを入力してください", autocomplete: "new-password" %>
+    </div>
+
+
+    <div class="form">
+      <div class="form-field">
+        <label class="form-text">紹介文</label>
+        <span class="caution">必須</span>
+      </div>
+        <%= f.text_area :profile, class:"description", placeholder:"自分のおすすめのジャンル・著者等好きに入力してください", rows:"7", maxlength:"1000" %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit "新規登録", class: :form_btn %>
+    </div>
+    <% end %>
+</div>
