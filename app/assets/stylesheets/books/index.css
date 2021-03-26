@@ -1,0 +1,147 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN W3", sans-serif;
+  color: #3b4043;
+}
+
+img {
+  max-width: 40%;
+  vertical-align: bottom;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+li {
+  list-style: none;
+}
+
+
+
+/* main */
+
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+}
+
+
+/* side-bar */
+.side-bar {
+  width: 300px;
+  height: 100vh;
+  background-color: #B0C4DE;
+}
+
+.side-bar-header {
+  height: 100px;
+  background-color: #66CCFF	;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-name a {
+  color: #FFFF33		;
+  font-size: 14px;
+}
+
+.create-room a {
+   font-size: 15px;
+   border: 1px solid #6666FF	 ;
+   padding: 10px;
+}
+
+.rooms {
+  height: calc(100vh - 100px);
+  background-color: #3399CC	;
+  padding: 10px 25px;
+  overflow: scroll;
+}
+
+.room {
+  padding: 20px 20px;
+}
+
+.room-name a {
+  font-size: 20px;
+  color: white;
+}
+
+
+/* main-bar */
+.main-bar {
+  width: 100%;
+  background-color: #FFFAF0	;
+}
+.main-header {
+  height: 100px;
+  text-align: center;
+  padding: auto;
+}
+
+.greeting {
+  height: 80px;
+  text-align: center;
+  font-size: 50px;
+}
+
+.greeting_link {
+   color: #33CCFF	;
+}
+
+
+
+.main-book {
+  height: calc(100vh - 100px);
+  background-color: white;
+}
+
+.book-wrapper {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.main-book-title {
+  font-size: 30px;
+  font-weight: initial;
+  color: #3b4043;
+  text-align: center;
+  padding-top: 30px;
+}
+
+.book-lists {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.list {
+  padding: 2vh;
+  width: 40vh;
+  overflow-wrap: break-word;
+}
+
+
+.book-information {
+  padding-bottom: initial;
+  overflow-wrap: break-word;
+}
+
+.book-nickname {
+  margin: 10px 0px;
+}
+
+
+
+
+
+
