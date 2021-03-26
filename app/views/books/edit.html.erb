@@ -1,0 +1,61 @@
+    <%= render "devise/shared/header" %>
+
+    <div class="form_wrapper">
+      <div class="book-main">
+          <h1 class="book-title">本の投稿</h1>
+
+            <%= form_with model: @book, local: true do |f| %>
+            
+            <div class="image-upload">
+             <div class="image-text">
+              投稿画像
+              <span class="indispensable">必須</span>
+             </div>
+            <div class="click-upload">
+              <%= f.file_field :image, id:"item-image" %>
+             </div>
+
+            <div class="new-book">
+              <div class="book-name">
+                題名
+                <span class="indispensable">必須</span>
+              </div>
+              <%= f.text_area :title, class:"book-text",  placeholder:"本のタイトルの記入" %>
+            </div>
+
+            <div class="new-book">
+              <div class="book-name">
+                著者
+                <span class="indispensable">必須</span>
+              </div>
+              <%= f.text_area :author, class:"book-text",  placeholder:"本の著者の記入" %>
+            </div>
+
+            <div class="new-book">
+              <div class="book-name">
+                カテゴリー
+                <span class="indispensable">必須</span>
+              </div>
+              <%= f.collection_select(:genre_id, Genre.all, :id, :name, {}, 
+              {class: "select_box", id:"item-shipping-fee-status"}) %>
+            </div>
+
+            <div class="new-book">
+              <div class="book-explain">
+                <div class="book-explanation">
+                  商品の説明
+                  <span class="indispensable">必須</span>
+                </div>
+                <%= f.text_area :description, class:"items-text", placeholder:"本の説明（必須 300文字まで）（読んだ感想・オススメな箇所など）" ,rows:"7" ,maxlength:"３00" %>
+              </div>
+            </div>
+
+             <div class="sell-btn-contents">
+              <%= f.submit "投稿する" ,class:"sell-btn" %>
+              <%=link_to 'もどる', book_path(@book.id), class:"back-btn" %>
+             </div>
+            <% end %>
+      </div>
+    </div>
+
+    <%= render "devise/shared/footer"%>
