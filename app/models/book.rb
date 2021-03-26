@@ -2,6 +2,7 @@ class Book < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to_active_hash :genre
   belongs_to :user
+  has_many :comments, dependent: :destroy
 
   with_options presence:true do
     validates :title
