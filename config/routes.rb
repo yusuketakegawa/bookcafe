@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: 'books#index'
+
+  resources :rooms, only: [:new, :create, :destroy] 
   
   resources :books do
     resources :comments, only: :create

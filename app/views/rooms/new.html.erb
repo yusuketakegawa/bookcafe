@@ -1,0 +1,41 @@
+<%= render "devise/shared/header"%>
+
+<div class="wrapper">
+  <div class="book-room">
+    <h1>新規ルーム</h1>
+    <%=form_with model: @room, local: true do |f|%>
+      <div class="book-form-field">
+        <div class="book-form-field-left">
+          <%= f.label :ルーム名, class: "book-form-field-left-label"%>
+        </div>
+        <div class="book-form-field-right">
+          <%= f.text_field :name, class: "book-form-field-name", placeholder: 'ルーム名を入力してください'%>
+        </div>
+      </div>
+      <div class="book-form-field">
+      </div>
+      <div class="book-form-field">
+        <div class="book-form-field-left">
+          <label class="book-form-field-left-label",for='book_room' >メンバー</label>
+        </div>
+        <div class="book-form-field-right">
+          <select name="room[user_ids][]">
+            <option value="">ユーザーを選択してください</option>
+            <% User.where.not(id: current_user).each do |user|%>
+                <option value=<%= user.id %>><%= user.nickname %></option>
+            <% end %>
+          </select>
+          <input name="room[user_ids][]" type="hidden" value=<%= current_user.id%>>
+        </div>
+      </div>
+      <div class="book-form-field">
+        <div class="book-form-field-left"></div>
+        <div class="book-form-field-right">
+          <%= f.submit class: "book-room-form-btn"%>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<%= render "devise/shared/footer"%>
