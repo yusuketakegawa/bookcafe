@@ -1,0 +1,18 @@
+<header class="header">
+  <div class= "nav">
+            <div class= "nav_left">
+              <h1 class="grind-6"><a href="/">Bookmate</a></h1> 
+            </div>
+            <% if user_signed_in? %>
+            <div class="nav_right">
+              <%=  link_to "ログアウト", destroy_user_session_path, method: :delete, class: :nav_logout %>
+              <%=  link_to  "New book", new_book_path,  class:  :nav_btn %>
+            </div>
+            <%  else %>
+            <div class="nav_right">
+              <%=  link_to "ログイン", new_user_session_path , class: :nav_btn %>
+              <%=  link_to  "新規登録", new_user_registration_path,  class:  :nav_btn    %>
+            </div>
+          <%  end %>
+          </div>
+</header>

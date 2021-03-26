@@ -1,0 +1,32 @@
+<%= render "devise/shared/header" %>
+
+<div class="wrapper">
+  <div class="side-bar">
+    <div class="side-bar-header">
+      <div class="header-name">
+          <% if user_signed_in?%>
+          <%= link_to current_user.nickname, user_path(current_user.id)%>
+          <% end %>
+      </div>
+    </div> 
+  </div>
+
+
+
+
+  <div class="main-bar">
+    <div class="main-header">
+      <% if user_signed_in?%>
+        <div class="greeting">
+          ようこそ、
+          <%= link_to "#{current_user.nickname}さん",user_path(current_user.id), class: :greeting_link %>
+        </div>
+      <% end %>
+    </div>
+
+    
+  </div>
+  
+</div>
+
+<%= render "devise/shared/footer"%>
