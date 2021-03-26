@@ -5,12 +5,23 @@
     <div class="side-bar-header">
        <div class="header-name">
           <% if user_signed_in?%>
-          <%= link_to current_user.nickname, "hoge"%>
+          <%= link_to current_user.nickname, "hoge" %>
           <% end %>
        </div>
        <div class="create-room">
-         <%=  link_to 'roomを作成する', "hoge" %>
+         <%=  link_to 'roomを作成する', new_room_path %>
        </div>
+    </div>
+    <div class="rooms">
+      <% if user_signed_in?%>
+      <% current_user.rooms.each do |room|%>
+       <div class="room">
+         <div class="room-name">
+          <%=  link_to room.name, "hoge" %>
+         </div>
+       </div>
+       <% end %>
+       <% end %>
     </div>
   </div>
 
