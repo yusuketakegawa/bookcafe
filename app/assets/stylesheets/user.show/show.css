@@ -1,0 +1,24 @@
+.show-wrapper {
+  min-height: 100vh;
+}
+
+.user-show {
+  text-align: center;
+  font-size: 20px;
+  margin: 30px 0;
+}
+
+.user-detail {
+  padding: 30px;
+}
+
+.book_show_lists {
+  list-style: none;
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+
+
+
