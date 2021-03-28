@@ -5,7 +5,7 @@
     <div class="side-bar-header">
        <div class="header-name">
           <% if user_signed_in?%>
-          <%= link_to current_user.nickname, "hoge" %>
+          <%= link_to current_user.nickname, user_path(current_user.id)%>
           <% end %>
        </div>
        <div class="create-room">
@@ -33,11 +33,11 @@
       <% if user_signed_in?%>
         <div class="greeting">
           ようこそ、
-          <%= link_to "#{current_user.nickname}さん", "hoge", class: :greeting_link %>
+          <%= link_to "#{current_user.nickname}さん",user_path(current_user.id), class: :greeting_link %>
         </div>
       <% end %>
     </div>
-    <!--ここから-->
+
    <div class='main-book'>
     <h2 class='main-book-title'>本の一覧紹介</h2>
     <ul class='book-lists'>
@@ -59,9 +59,7 @@
       <% end %>
     </ul>
   </div>
-    <!--メインの最後-->
   </div>
-<!--最終-->
 </div>
 
 
