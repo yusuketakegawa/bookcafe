@@ -8,9 +8,11 @@
           <%= link_to current_user.nickname, user_path(current_user.id)%>
           <% end %>
        </div>
+       <% if user_signed_in?%>
        <div class="create-room">
          <%=  link_to 'roomを作成する', new_room_path %>
        </div>
+       <% end %>
     </div>
     <div class="rooms">
       <% if user_signed_in?%>
