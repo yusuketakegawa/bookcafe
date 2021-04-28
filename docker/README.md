@@ -55,9 +55,3 @@ docker exec -it app bash
 mysql -u root -h db -p
 ```
 
-## How to download Rails app
-
-```
-bundle exec rails new app
-```
-
