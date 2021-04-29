@@ -37,4 +37,4 @@ public/assets
 /.env.production
 /.env.development
 
-/docker/mysql/db_data
+/docker/mysql/db_data/
