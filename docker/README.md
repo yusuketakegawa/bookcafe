@@ -25,9 +25,9 @@ sudo vim /etc/hosts
 - docker run
 
 ```
-cd dev_rails
+cd bookcafe
 cp .env.example .env
-cd docker/dev/
+cd docker/
 docker-compose up -d
 ```
 
@@ -36,6 +36,7 @@ docker-compose up -d
 ```
 docker exec -it app bash
 
+yarn install
 bundle install
 rails db:migrate
 /usr/bin/supervisorctl restart app
