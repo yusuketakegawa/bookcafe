@@ -15,17 +15,24 @@ bookmate
 ## DEMO
 
 ### トップページ
-<img width="1440" alt="スクリーンショット 2021-03-25 17 30 45" src="https://user-images.githubusercontent.com/78135308/112446121-355e1800-8d93-11eb-89f5-3daf21a54a00.png">
+![スクリーンショット 2021-06-18 17 53 11](https://user-images.githubusercontent.com/78135308/122537297-61bac500-d060-11eb-855e-10e14cf064a6.gif)
+
 
 
 
 ### 新規登録画面
-(https://user-images.githubusercontent.com/78135308/122536533-97ab7980-d05f-11eb-9b75-a24745f5de2a.gif)
+![スクリーンショット 2021-06-18 16 22 23](https://user-images.githubusercontent.com/78135308/122537262-59fb2080-d060-11eb-8ca6-5e6c8bcbe2df.gif)
+
 
 
 
 ### 詳細画面
-<img width="1440" alt="スクリーンショット 2021-03-26 11 48 30" src="https://user-images.githubusercontent.com/78135308/112570388-4bb6b300-8e29-11eb-9fec-7c82e46d42fa.png">
+![スクリーンショット 2021-06-18 18 01 41](https://user-images.githubusercontent.com/78135308/122537334-6aab9680-d060-11eb-9b57-2f640bef1216.gif)
+
+
+### トーク画面
+![スクリーンショット 2021-06-18 17 54 23](https://user-images.githubusercontent.com/78135308/122537316-654e4c00-d060-11eb-9b76-6d1ea7cd5461.gif)
+
 
 
 ## 工夫したポイント
