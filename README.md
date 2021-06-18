@@ -26,11 +26,11 @@ bookmate
 
 
 
-### 詳細画面
+### トーク画面
 ![スクリーンショット 2021-06-18 18 01 41](https://user-images.githubusercontent.com/78135308/122537334-6aab9680-d060-11eb-9b57-2f640bef1216.gif)
 
 
-### トーク画面
+### 詳細画面
 ![スクリーンショット 2021-06-18 17 54 23](https://user-images.githubusercontent.com/78135308/122537316-654e4c00-d060-11eb-9b76-6d1ea7cd5461.gif)
 
 
@@ -51,6 +51,7 @@ Ruby Ruby on Rails
 MySQL SequelPro
 
 ### インフラ
+docker 
 
 ### ソースコード
 GitHub GitHubDesktop
